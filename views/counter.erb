@@ -1,0 +1,48 @@
+<style>
+  .counter {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 250px;
+    height: 200px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+    font-family: monospace;
+  }
+  .counter samp {
+    font-size: 120px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-family: inherit;
+  }
+</style>
+<p data-url="<%= url("/#{device.address}/counter.json") %>" class="counter"><%= device.name %> <samp><%= device.counter %></samp></p>
+
+<h2>Device details</h2>
+
+<table class="table table-striped">
+  <tr>
+    <th>Address</th>
+    <td><%= device.address %></td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td><%= device.name %></td>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <td><%= device.location %></td>
+  </tr>
+  <tr>
+    <th>Timezone</th>
+    <td><%= device.timezone %></td>
+  </tr>
+  <tr>
+    <th>Version</th>
+    <td><%= device.version %></td>
+  </tr>
+</table>
